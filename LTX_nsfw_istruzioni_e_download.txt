@@ -1,0 +1,72 @@
+LTX - TRANSFORMER NSFW E LORA: ISTRUZIONI E DOWNLOAD
+====================================================
+
+Cartella di lavoro: G:\realTime_create
+Ambiente: vtr
+
+
+1) TRANSFORMER NSFW PER LTX 2.5
+-------------------------------
+
+Download:
+  https://huggingface.co/colinb83/ltx-2.5-nsfw-step7000
+
+Da prompt, con l'ambiente vtr attivo, in G:\realTime_create:
+
+  hf download colinb83/ltx-2.5-nsfw-step7000 --local-dir G:\realTime_create\download_nsfw
+
+(se "hf" non e' installato: huggingface-cli download con gli stessi argomenti)
+
+Conversione in formato diffusers con lo script (converti.py / convert.py):
+
+  python converti.py
+
+Prima di lanciarlo controlla che il percorso del checkpoint nello script
+punti al file scaricato (ltx-2.5-nsfw-step7000.safetensors).
+
+Cartella di destinazione del transformer convertito:
+
+  G:\realTime_create\model\transformer_nsfw
+
+
+2) LORA LTX
+-----------
+
+Cartella dove mettere TUTTI i LoRA scaricati:
+
+  G:\realTime_create\lora_ltx
+
+Elenco (file -> pagina di download):
+
+- LTX25_Ripple_v11.safetensors  (LTX 2.5)
+  https://civitai.com/models/2989229/ltx-ripple
+
+- LTX2.3_Crisp_Enhance.safetensors  (LTX 2.3)
+  https://civitai.com/models/2535622/ltx-23-enhancers?modelVersionId=2849716
+
+- BEANFLK_V1.safetensors  (LTX 2.3)
+  https://civitai.red/models/2829335/beanflk-masturbation-and-finger-insertion-audio?modelVersionId=3192441
+
+- CUMOUF_oral_creampie_v1.safetensors  (LTX 2.3)
+  https://civitai.red/models/2846978/cimlg-the-oral-creampie-lora-minimax-h3?modelVersionId=3214563
+
+- ltx23-cunilingus-32epoc-sulphured-audio-k3nk.safetensors  (LTX 2.3)
+  https://civitai.red/models/2630564/cunnilingus-ltx23-video-lora-k3nk?modelVersionId=2953467
+
+- Penile_Praxis_V4.safetensors  (LTX 2 / 2.3)
+  https://civitai.red/models/2332473/penile-praxis-general-nsfw-ltx-2-t2v-i2v?modelVersionId=2772932
+
+- RESTRAINT_pussyjob_sumata_v1.safetensors  (LTX 2.3)
+  https://civitai.red/models/2492660/pussyjob-ltx-23sulphur?modelVersionId=2814696
+
+
+NOTE
+----
+- I link civitai.red richiedono di abilitare i contenuti maturi nelle
+  impostazioni dell'account.
+- L'abbinamento file -> link e' dedotto dai nomi: verifica CUMOUF_oral_creampie_v1
+  e RESTRAINT_pussyjob_sumata_v1, che hanno nomi diversi dalle pagine.
+- Le versioni LTX 2.3 / 2.5 sono dedotte dai titoli delle pagine: verificale
+  prima di combinare i LoRA con il transformer.
+- Non condividere i link di download completi di Civitai: contengono un token
+  temporaneo legato al tuo account.
