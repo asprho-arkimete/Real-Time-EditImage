@@ -36,7 +36,7 @@ pip3 install torch torchvision --index-url https://download.pytorch.org/whl/cu13
 ### 4. Installa le librerie
 
 ```bash
-pip install -r requirements.txt
+pip install -r requisiti.txt
 ```
 
 ### 5. Primo avvio
