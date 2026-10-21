@@ -72,6 +72,20 @@ I modelli FLUX.2 e LTX-2.5 vengono scaricati automaticamente al primo utilizzo.
 
 - Se non riesci a scaricare il modello LTX-2.5, rimuovi `local_files_only=True` dalla funzione `carica_pipeline()` (riga 407 di `realtime.py`).
 
+- ## Risoluzione problemi
+
+**Errore al caricamento di LTX-2.5 / il modello non si scarica**
+
+Il programma carica LTX-2.5 solo dai file già presenti sul disco
+(`local_files_only=True`). Se il modello non è ancora stato scaricato,
+il caricamento fallisce. In questo caso:
+
+1. Apri `realtime.py` e cerca la funzione `carica_pipeline()` (riga 407).
+2. Elimina `local_files_only=True` dalla chiamata `from_pretrained(...)`.
+3. Riavvia il programma: il modello viene scaricato in automatico.
+4. A download finito puoi rimettere `local_files_only=True`
+   per evitare controlli di rete a ogni avvio.
+
 
 
  
